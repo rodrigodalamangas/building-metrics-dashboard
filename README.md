@@ -22,6 +22,8 @@ TODO: Create a dashboard in Grafana that shows Prometheus as a source. Take a sc
 
 ![CLUSTER COMPUTE RESOURCES](answer-img/basic_dashboard.png "Cluster Compute Resources")
 
+![GRAFANA DATASOURCES](answer-img/grafana_datasources.png "Grafana Datasources")
+
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
 
@@ -85,15 +87,30 @@ Description: Starting from today, all requests sent to the Trial API have return
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create KPIs to accurately measure these metrics. We will make a dashboard for this, but first write them down here.
 
+1. **99% application uptime per month.**
 * Server uptime > 99%;
 * Deployment uptime > 99%;
+
+    These 2 KPIs measure the Uptime of application services.
+
+2. **Server resources do not exceed 90% usage per month.**
 * CPU Utilization < 90%;
 * Disk Drive Utilization < 90%;
 * RAM Memory Utilization < 90%;
+
+    These 3 KPIs measure server Saturation.
+
+3. **More than 95% of requests must execute successfully and without errors.**
 * Successful responses per month > 95% of requests;
 * Error responses per month < 0.5% of requests;
+
+    These 2 KPIs measure Traffic and Errors of application sevices.
+
+4. **90% of all requests repond below 250ms.**
 * Average Response Time < 250ms;
 * Percentage of requests with latency of less than 250ms > 90%.
+
+    These 2 KPIs measure the Latency of application services.
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.
